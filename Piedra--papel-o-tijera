@@ -1,0 +1,39 @@
+import random
+import time
+puntosPY1=0
+puntosPY2=0
+
+while True:
+    print("----------------------------")
+    pregunta=input("Piedra, papel o tijera :   ")
+
+    respuesta=random.randint(1,3)
+
+    respuestapalabra=""
+
+    if respuesta == 1 :
+        respuestapalabra="Piedra"
+    elif respuesta == 2 :
+        respuestapalabra="papel"
+    elif respuesta == 3 :
+        respuestapalabra="tijera"
+
+        
+
+    
+    if pregunta == "piedra" or pregunta == "Piedra" or pregunta == "papel" or pregunta == "Papel" or pregunta == "tijera" or pregunta == "Tijera" :
+        print("tu respuesrta es ",pregunta, " vs oponente respuesta es ", respuestapalabra )
+        if respuesta == 1 and pregunta == "papel" or respuesta == 2 and pregunta == "tijera" or respuesta == 3 and pregunta == "piedra" :
+            print("ganas tu")
+            puntosPY1+=1
+        elif respuesta == 2 and pregunta == "papel" or respuesta == 3 and pregunta == "tijera" or respuesta == 1 and pregunta == "piedra" :
+            print("empate")
+        elif respuesta == 3 and pregunta == "papel" or respuesta == 1 and pregunta == "tijera" or respuesta == 2 and pregunta == "piedra" :
+            puntosPY2+=1
+            print("Has perdido")
+
+    else :
+        print("Esa respuesta no ecsiste")
+    
+    print(puntosPY1)
+    print(puntosPY2)
